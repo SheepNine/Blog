@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body, p, div, h1, h2, h3, ul, ol {
+body, p, div, h1, h2, h3, ul, ol, table, tr, td {
 	border: 0;
 	margin: 0;
+}
+table {
+	border-collapse: collapse;
 }
 body {
 	color: #00AAAA;
 	background: #555555;
 	font-family: consolas, monospace;
-	font-size: 18px;
 }
 div.console {
-	padding-left: 9px;
+	padding: 0 0.275em;
 	background: #000000;
-	padding-bottom: 18px;
-	margin: 18px auto;
-	padding-right: 9px;
-	border: 3px solid #AAAAAA;
+	margin: 1em auto;
+	border-top: 0.1em solid #AAAAAA;
+	border-bottom: 0.1em solid #AAAAAA;
 	box-sizing: border-box;
-	width: 1014px; /* 990 + 2*3 + 2*9 */
+	min-width: 20.35em;  /*0.55 * fontsize * 37 + (2 x padding + 2 x border)*/
+	max-width: 55.55em; /*0.55 * fontsize * 100 + (2 x padding + 2 x border)*/
 }
 p {
-	margin-bottom: 18px;
+	margin-bottom: 1em;
 }
 a.no-underline {
 	text-decoration: none;
@@ -43,8 +46,8 @@ a:active {
 h1, h2, h3 {
 	color: #55FFFF;
 	font-weight: normal;
-	font-size: 18px;
-	margin-bottom: 18px;
+	font-size: 1em;
+	margin-bottom: 1em;
 	background: #555555;
 }
 h1:before { content: "===== "; }
@@ -56,7 +59,7 @@ h3:after  { content: " - - -"; }
 ul {
 	list-style: none;
 	padding:0;
-	margin-bottom: 18px;
+	margin-bottom: 1em;
 }
 li:before {
 	content: "\00a0* ";
@@ -65,7 +68,7 @@ p:before {
 	content: "\00a0\00a0\00a0";
 }
 p.header-footer {
-	white-space: pre;
+	white-space: pre-wrap;
 }
 p.header-footer:before {
 	content: "";
@@ -74,20 +77,43 @@ strong {
 	font-weight: normal;
 	color: #55FFFF;
 }
+div.header-footer-dashed-line {
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+table.header-footer td {
+	vertical-align: top;
+}
+table.header-footer td:first-child {
+	width: 6.6em;
+}
+div.main-content {
+	margin: 1em 0;
+}
 </style>
 </head>
 <body>
 <div class="console">
-<p class="header-footer">
-~$ <strong>unary-heap-blog</strong> read-post
+<div style="width:34.1em;height:1px;background:#FF5555;position:fixed;top:0;right:0"></div>
+<div style="width:20.9em;height:1px;background:#55FF55;position:fixed;top:1px;right:0"></div>
 
-----------------------------------------------------------------------------------------------------
-post title: Working with git 2: Killing the Repo Demon
-post date:  2016-04-23
-post tags:  <a href="example.com">blog</a>, <a href="example.com">audio</a>, <a href="example.com">snake-rattle-n-roll</a>
-prev post:  <a href="example.com">Working with git 1: Where is the beef?</a>
-next post:  <a href="example.com">A special PSA</a>
-----------------------------------------------------------------------------------------------------</p>
+<div class="header">
+<p class="header-footer">
+~$ <strong>unary-heap-blog</strong> read-post</p>
+<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+<table class="header-footer">
+<tr><td>post title:</td><td>Working with git 2: Killing the Repo Demon</td></tr>
+<tr><td>post date:</td><td>2016-04-23</td></tr>
+<tr><td>post tags</td><td><a href="example.com">blog</a>, <a href="example.com">audio</a>, <a href="example.com">snake-rattle-n-roll</a></td></tr>
+<tr><td>prev post:</td><td><a href="example.com">Working with git 1: Where is the beef?</a></td></tr>
+<tr><td>next post:</td><td><a href="example.com">A special PSA</a></td></tr>
+</table>
+<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+</div>
+
+
+<div class="main-content">
 <!------------------------------------------------------------------------------------------------>
 <!-- START OF CONTENT -->
 <!------------------------------------------------------------------------------------------------>
@@ -108,13 +134,21 @@ next post:  <a href="example.com">A special PSA</a>
 <!------------------------------------------------------------------------------------------------>
 <!-- END OF CONTENT -->
 <!------------------------------------------------------------------------------------------------>
-<p class="header-footer">----------------------------------------------------------------------------------------------------
-post tags:  <a href="example.com">blog</a>, <a href="example.com">audio</a>, <a href="example.com">snake-rattle-n-roll</a>
-prev post:  <a href="example.com">Working with git 1: Where is the beef?</a>
-next post:  <a href="example.com">A special PSA</a>
-----------------------------------------------------------------------------------------------------
+</div>
 
+
+<div class="footer">
+<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+<table class="header-footer">
+<tr><td>post tags</td><td><a href="example.com">blog</a>, <a href="example.com">audio</a>, <a href="example.com">snake-rattle-n-roll</a></td></tr>
+<tr><td>prev post:</td><td><a href="example.com">Working with git 1: Where is the beef?</a></td></tr>
+<tr><td>next post:</td><td><a href="example.com">A special PSA</a></td></tr>
+</table>
+<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+<p class="header-footer">
 ~$ <a class="no-underline" href="example.com">man unary-heap-blog</a>_</p>
+</div>
+
 </div>
 </body>
 </html>
