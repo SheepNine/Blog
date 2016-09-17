@@ -4,7 +4,7 @@
 	<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
 	<table class="header-footer">
 		<tr><td>post&nbsp;title:&nbsp;</td><td><strong>{{ page.title }}</strong></td></tr>
-		<tr><td>post&nbsp;date:&nbsp;&nbsp;</td><td>{{ page.date }}</td></tr>
+		<tr><td>post&nbsp;date:&nbsp;&nbsp;</td><td>{{ page.date | date: "%F" }}</td></tr>
 		<tr><td>prev&nbsp;post:&nbsp;&nbsp;</td>
 		{% if page.previous %}
 		<td><a href="{{ page.previous.url | prepend: site.github.url }}">{{ page.previous.title }}</a></td>
