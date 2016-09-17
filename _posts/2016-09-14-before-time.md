@@ -1,5 +1,6 @@
 ---
-layout: terminal-bare
+title: BEFORE TIME
+layout: terminal-post
 ---
 
 # Hello world

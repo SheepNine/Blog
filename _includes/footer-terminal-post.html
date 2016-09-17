@@ -1,0 +1,16 @@
+<div class="footer">
+	<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+	<table class="header-footer">
+		<tr><td>post title:</td><td>{{ page.title }}</td></tr>
+		<tr><td>post date:</td><td>{{ page.date }}</td></tr>
+		{% if page.previous %}
+		<tr><td>prev post:</td><td><a href="{{ page.previous.url | prepend: site.github.url }}">{{ page.previous.title }}</a></td></tr>
+		{% endif %}		
+		{% if page.next %}
+		<tr><td>next post:</td><td><a href="{{ page.next.url | prepend: site.github.url }}">{{ page.next.title }}</a></td></tr>
+		{% endif %}
+	</table>
+	<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
+	<p class="header-footer">
+~$ <a class="no-underline" href="{{site.github.url}}/">man unary-heap-blog</a>_</p>
+</div>

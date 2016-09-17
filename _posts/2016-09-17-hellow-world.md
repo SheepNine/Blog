@@ -1,7 +1,7 @@
 ---
 title: HELLO WORLD
+layout: terminal-post
 chocolate: dark
-layout: baremetal
 ---
 
 # Hello world
