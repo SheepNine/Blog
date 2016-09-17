@@ -23,3 +23,5 @@ layout: baremetal
 - good
 
 Some chocolate is {{ page.chocolate }}.
+
+site.github.url is '{{ site.github.url }}'.
