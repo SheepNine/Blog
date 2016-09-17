@@ -1,0 +1,25 @@
+---
+title: HELLO WORLD
+chocolate: dark
+layout: baremetal
+---
+
+# Hello world
+
+## SubHeading
+
+### SubSubHeading
+
+*Emphasis* or _emphasis_.
+
+**Strong emphasis** (__alternate form__).
+
+~~Strikethrough~~.
+
+- Lists
+- of
+- things
+- are
+- good
+
+Some chocolate is {{ page.chocolate }}.
