@@ -1,0 +1,101 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uncustomized Page Title</title>
+</head>
+
+<head>
+<title>Terminal Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, p, div, h1, h2, h3, ul, ol, table, tr, td {
+	border: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+}
+body {
+	color: #00AAAA;
+	background: #555555;
+	font-family: consolas, monospace;
+}
+div.console {
+	padding: 0 0.275em;
+	background: #000000;
+	margin: 1em auto;
+	border-top: 0.1em solid #AAAAAA;
+	border-bottom: 0.1em solid #AAAAAA;
+	box-sizing: border-box;
+	min-width: 20.35em;  /*0.55 * fontsize * 37 + (2 x padding + 2 x border)*/
+	max-width: 55.55em; /*0.55 * fontsize * 100 + (2 x padding + 2 x border)*/
+}
+p {
+	margin-bottom: 1em;
+}
+a.no-underline {
+	text-decoration: none;
+}
+a {
+	text-decoration: underline;
+	color: #00AAAA;
+}
+a:hover {
+	color: #000000;
+	background: #00AAAA;
+	text-decoration: none;
+}
+a:active {
+	background: #55FFFF;
+}
+h1, h2, h3 {
+	color: #55FFFF;
+	font-weight: normal;
+	font-size: 1em;
+	margin-bottom: 1em;
+	background: #555555;
+}
+h1:before { content: "===== "; }
+h1:after  { content: " ====="; }
+h2:before { content: "----- "; }
+h2:after  { content: " -----"; }
+h3:before { content: "- - - "; }
+h3:after  { content: " - - -"; }
+ul {
+	list-style: none;
+	padding:0;
+	margin-bottom: 1em;
+}
+li:before {
+	content: "\00a0* ";
+}
+p:before {
+	content: "\00a0\00a0\00a0";
+}
+p.header-footer {
+	white-space: pre-wrap;
+}
+p.header-footer:before {
+	content: "";
+}
+strong {
+	font-weight: normal;
+	color: #55FFFF;
+}
+div.header-footer-dashed-line {
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+table.header-footer td {
+	vertical-align: top;
+}
+table.header-footer td:first-child {
+	width: 6.6em;
+}
+div.main-content {
+	margin: 1em 0;
+}
+</style>
+</head>
