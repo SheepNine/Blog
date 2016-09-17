@@ -3,14 +3,22 @@
 ~$ <strong>unary-heap-blog</strong> read-post</p>
 	<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
 	<table class="header-footer">
-		<tr><td>post title:</td><td>{{ page.title }}</td></tr>
-		<tr><td>post date:</td><td>{{ page.date }}</td></tr>
+		<tr><td>post&nbsp;title:&nbsp;</td><td><strong>{{ page.title }}</strong></td></tr>
+		<tr><td>post&nbsp;date:&nbsp;&nbsp;</td><td>{{ page.date }}</td></tr>
+		<tr><td>prev&nbsp;post:&nbsp;&nbsp;</td>
 		{% if page.previous %}
-		<tr><td>prev post:</td><td><a href="{{ page.previous.url | prepend: site.github.url }}">{{ page.previous.title }}</a></td></tr>
+		<td><a href="{{ page.previous.url | prepend: site.github.url }}">{{ page.previous.title }}</a></td>
+		{% else %}
+		<td>&lt;NONE&gt;</td>
 		{% endif %}		
+		</tr>
+		<tr><td>next&nbsp;post:&nbsp;&nbsp;</td>
 		{% if page.next %}
-		<tr><td>next post:</td><td><a href="{{ page.next.url | prepend: site.github.url }}">{{ page.next.title }}</a></td></tr>
+		<td><a href="{{ page.next.url | prepend: site.github.url }}">{{ page.next.title }}</a></td>
+		{% else %}
+		<td>&lt;NONE&gt;</td>
 		{% endif %}
+		</tr>
 	</table>
 	<div class="header-footer-dashed-line">----------------------------------------------------------------------------------------------------</div>
 </div>
